@@ -7,7 +7,7 @@ mod postgres {
     use refinery::{
         config::Config, embed_migrations, error::Kind, Migrate, Migration, Runner, Target,
     };
-    use refinery_core::postgres::{Client, NoTls};
+    use trailbase_refinery_core::postgres::{Client, NoTls};
     use std::process::Command;
     use std::str::FromStr;
     use time::OffsetDateTime;

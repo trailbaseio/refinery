@@ -6,7 +6,7 @@ use proc_macro::TokenStream;
 use proc_macro2::{Span as Span2, TokenStream as TokenStream2};
 use quote::quote;
 use quote::ToTokens;
-use refinery_core::{find_migration_files, MigrationType};
+use trailbase_refinery_core::{find_migration_files, MigrationType};
 use std::path::PathBuf;
 use std::{env, fs};
 use syn::{parse_macro_input, Ident, LitStr};
@@ -19,7 +19,7 @@ pub(crate) fn crate_root() -> PathBuf {
 
 fn migration_fn_quoted<T: ToTokens>(_migrations: Vec<T>) -> TokenStream2 {
     let result = quote! {
-        use refinery::{Migration, Runner};
+        use trailbase_refinery_core::{Migration, Runner};
         pub fn runner() -> Runner {
             let quoted_migrations: Vec<(&str, String)> = vec![#(#_migrations),*];
             let mut migrations: Vec<Migration> = Vec::new();
@@ -39,7 +39,7 @@ fn migration_enum_quoted(migration_names: &[impl AsRef<str>]) -> TokenStream2 {
 
         for m in migration_names {
             let m = m.as_ref();
-            let (_, version, name) = refinery_core::parse_migration_name(m)
+            let (_, version, name) = trailbase_refinery_core::parse_migration_name(m)
                 .unwrap_or_else(|e| panic!("Couldn't parse migration filename '{}': {:?}", m, e));
             let variant = Ident::new(name.to_upper_camel_case().as_str(), Span2::call_site());
             variants.push(quote! { #variant(Migration) = #version });
@@ -164,7 +164,7 @@ mod tests {
     fn test_quote_fn() {
         let migs = vec![quote!("V1__first", "valid_sql_file")];
         let expected = concat! {
-            "use refinery :: { Migration , Runner } ; ",
+            "use trailbase_refinery_core :: { Migration , Runner } ; ",
             "pub fn runner () -> Runner { ",
             "let quoted_migrations : Vec < (& str , String) > = vec ! [\"V1__first\" , \"valid_sql_file\"] ; ",
             "let mut migrations : Vec < Migration > = Vec :: new () ; ",

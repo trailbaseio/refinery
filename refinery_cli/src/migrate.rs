@@ -1,7 +1,7 @@
 use std::path::Path;
 
 use anyhow::Context;
-use refinery_core::{
+use trailbase_refinery_core::{
     config::{Config, ConfigDbType},
     find_migration_files, Migration, MigrationType, Runner, Target,
 };

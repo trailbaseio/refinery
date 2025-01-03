@@ -14,21 +14,21 @@ edition = "2018"
 
 [features]
 default = ["toml"]
-rusqlite-bundled = ["refinery-core/rusqlite-bundled"]
-rusqlite = ["refinery-core/rusqlite"]
-postgres = ["refinery-core/postgres"]
-mysql = ["refinery-core/mysql"]
-tokio-postgres = ["refinery-core/tokio-postgres"]
-mysql_async = ["refinery-core/mysql_async"]
-tiberius = ["refinery-core/tiberius"]
-tiberius-config = ["refinery-core/tiberius", "refinery-core/tiberius-config"]
-serde = ["refinery-core/serde"]
-toml = ["refinery-core/toml"]
-enums = ["refinery-macros/enums"]
+rusqlite-bundled = ["trailbase-refinery-core/rusqlite-bundled"]
+rusqlite = ["trailbase-refinery-core/rusqlite"]
+postgres = ["trailbase-refinery-core/postgres"]
+mysql = ["trailbase-refinery-core/mysql"]
+tokio-postgres = ["trailbase-refinery-core/tokio-postgres"]
+mysql_async = ["trailbase-refinery-core/mysql_async"]
+tiberius = ["trailbase-refinery-core/tiberius"]
+tiberius-config = ["trailbase-refinery-core/tiberius", "trailbase-refinery-core/tiberius-config"]
+serde = ["trailbase-refinery-core/serde"]
+toml = ["trailbase-refinery-core/toml"]
+enums = ["trailbase-refinery-macros/enums"]
 
 [dependencies]
-refinery-core = { version = "0.8.14", path = "../refinery_core" }
-refinery-macros = { version = "0.8.14", path = "../refinery_macros" }
+trailbase-refinery-core = { version = "0.8.14", path = "../refinery_core" }
+trailbase-refinery-macros = { version = "0.8.14", path = "../refinery_macros" }
 
 [dev-dependencies]
 barrel = { git = "https://github.com/jxs/barrel", features = ["sqlite3", "pg", "mysql", "mssql"] }

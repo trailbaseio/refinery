@@ -9,8 +9,8 @@ mod mysql_async {
         error::Kind,
         AsyncMigrate, Migration, Runner, Target,
     };
-    use refinery_core::mysql_async;
-    use refinery_core::mysql_async::prelude::Queryable;
+    use trailbase_refinery_core::mysql_async;
+    use trailbase_refinery_core::mysql_async::prelude::Queryable;
     use std::panic::AssertUnwindSafe;
     use time::OffsetDateTime;
 

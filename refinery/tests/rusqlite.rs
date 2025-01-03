@@ -10,8 +10,8 @@ mod rusqlite {
         error::Kind,
         Migrate, Migration, Runner, Target,
     };
-    use refinery_core::rusqlite::Error;
-    use refinery_core::rusqlite::{Connection, OptionalExtension};
+    use trailbase_refinery_core::rusqlite::Error;
+    use trailbase_refinery_core::rusqlite::{Connection, OptionalExtension};
     use std::fs::{self, File};
     use std::process::Command;
     use time::OffsetDateTime;

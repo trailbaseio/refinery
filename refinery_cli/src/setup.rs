@@ -15,7 +15,7 @@
 //! override otherwise default values
 
 use anyhow::{anyhow, Result};
-use refinery_core::config::{Config, ConfigDbType};
+use trailbase_refinery_core::config::{Config, ConfigDbType};
 use std::fs::File;
 use std::io::{self, Write};
 

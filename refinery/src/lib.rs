@@ -31,8 +31,8 @@ embedded::migrations::runner().run(&mut conn).unwrap();
 for more examples refer to the [examples](https://github.com/rust-db/refinery/tree/master/examples)
 */
 
-pub use refinery_core::config;
-pub use refinery_core::{error, load_sql_migrations, Error, Migration, Report, Runner, Target};
+pub use trailbase_refinery_core::config;
+pub use trailbase_refinery_core::{error, load_sql_migrations, Error, Migration, Report, Runner, Target};
 #[doc(hidden)]
-pub use refinery_core::{AsyncMigrate, Migrate};
-pub use refinery_macros::embed_migrations;
+pub use trailbase_refinery_core::{AsyncMigrate, Migrate};
+pub use trailbase_refinery_macros::embed_migrations;

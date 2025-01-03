@@ -1,12 +1,12 @@
 [package]
-name = "refinery-core"
-version = "0.8.14"
-authors = ["Katharina Fey <kookie@spacekookie.de>", "João Oliveira <hello@jxs.pt>"]
-description = "This crate should not be used directly, it is internally related to Refinery"
+name = "trailbase-refinery-core"
+version = "0.8.15"
+authors = ["TrailBase <contact@trailabse.io>"]
+description = "Fork of Refinery's refinery-core crate"
 license = "MIT OR Apache-2.0"
-documentation = "https://docs.rs/refinery/"
-repository = "https://github.com/rust-db/refinery"
+repository = "https://github.com/trailbaseio/refinery"
 edition = "2021"
+readme = "README.md"
 
 [features]
 default = []

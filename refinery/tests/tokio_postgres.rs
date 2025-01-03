@@ -9,8 +9,8 @@ mod tokio_postgres {
         error::Kind,
         AsyncMigrate, Migration, Runner, Target,
     };
-    use refinery_core::tokio_postgres;
-    use refinery_core::tokio_postgres::NoTls;
+    use trailbase_refinery_core::tokio_postgres;
+    use trailbase_refinery_core::tokio_postgres::NoTls;
     use std::panic::AssertUnwindSafe;
     use time::OffsetDateTime;
 

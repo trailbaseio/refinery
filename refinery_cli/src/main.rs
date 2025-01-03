@@ -18,7 +18,7 @@ fn main() -> Result<(), Error> {
     let mut builder = Builder::new();
     builder
         .format(|buf, record| writeln!(buf, "{}", record.args()))
-        .filter(Some("refinery_core::traits"), LevelFilter::Info)
+        .filter(Some("trailbase_refinery_core::traits"), LevelFilter::Info)
         .target(Target::Stdout)
         .init();
 

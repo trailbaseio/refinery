@@ -11,7 +11,7 @@ mod mysql {
         error::Kind,
         Migrate, Migration, Runner, Target,
     };
-    use refinery_core::mysql;
+    use trailbase_refinery_core::mysql;
     use std::process::Command;
     use time::OffsetDateTime;
 

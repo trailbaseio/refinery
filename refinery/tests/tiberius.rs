@@ -8,7 +8,7 @@ mod tiberius {
     use refinery::{
         config::Config, embed_migrations, error::Kind, AsyncMigrate, Migration, Runner, Target,
     };
-    use refinery_core::tiberius::{self, Config as TConfig};
+    use trailbase_refinery_core::tiberius::{self, Config as TConfig};
     use std::convert::TryInto;
     use std::panic::AssertUnwindSafe;
     use std::process::Command;
