@@ -6,7 +6,7 @@ description = "Fork of Refinery's refinery-macros crate"
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/trailbaseio/refinery"
 edition = "2018"
-readme = "../refinery_core/README.md"
+readme = "../README.md"
 
 [features]
 enums = []

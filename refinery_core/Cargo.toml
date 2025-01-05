@@ -6,7 +6,7 @@ description = "Fork of Refinery's refinery-core crate"
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/trailbaseio/refinery"
 edition = "2021"
-readme = "README.md"
+readme = "../README.md"
 
 [features]
 default = []
