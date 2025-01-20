@@ -1,6 +1,6 @@
 [package]
 name = "trailbase-refinery-core"
-version = "0.8.15"
+version = "0.8.16"
 authors = ["TrailBase <contact@trailabse.io>"]
 description = "Fork of Refinery's refinery-core crate"
 license = "MIT OR Apache-2.0"
